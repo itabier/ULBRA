@@ -1,0 +1,1584 @@
+
+*Obs.: Os 4 exercícios da aula do dia 01/04/2020 estão no final.
+
+Exercícios da aula do dia 25/03/2020 - Seleção
+
+1 - Faça um algoritmo para ler um número e informar se ele está na 
+faixa de 
+números entre 100(inclusive) e 1000(inclusive).
+
+#include <stdio.h>
+
+
+
+int main()
+{
+    
+
+	int nr1;
+    
+    
+
+	printf("Digite um número: ");
+    
+	scanf("%i", &nr1);
+    
+    
+
+	
+	if (nr1>= 100 && nr1<= 1000)
+        
+		printf("está dentro da faixa");
+    
+    
+
+	else
+        
+		printf("está fora da faixa");
+    
+
+    
+
+	return 0;
+
+
+}
+
+
+2 - Faça um algoritmo para ler um número e se ele for maior do que 
+30, então
+ exibir metade do número, caso contrário, imprimir o 
+dobro do número.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{
+    
+	float nro1, met_nro, dob_nro;
+    
+    
+
+	printf("Digite um número: ");
+    
+	scanf("%f", &nro1);
+    
+    
+
+	met_nro = nro1/2;
+    
+	dob_nro = nro1*2;
+    
+    
+
+	
+	if (nro1> 30)
+        
+		printf("Exibindo: %.1f", met_nro);
+    
+    
+
+	else
+        
+		printf("Exibindo: %.1f", dob_nro);
+  
+   
+ 
+	return 0;
+
+
+}
+
+
+3 - Faça um algoritmo para ler três números e verificar se a soma deles é maior
+que 50. Se for, escrever uma mensagem informando.
+
+#include <stdio.h>
+
+
+
+int main()
+{
+
+    	int nro1, nro2, nro3, soma;
+    
+    
+
+	printf("Digite um número: ");
+    
+	scanf("%i", &nro1);
+    
+	printf("Digite um segundo número: ");
+    
+	scanf("%i", &nro2);
+    
+	printf("Digite um terceiro número: ");
+    
+	scanf("%i", &nro3);
+    
+    
+	
+	soma = nro1+nro2+nro3;
+    
+    
+	
+	
+	if (soma > 50)
+        
+		printf("A soma dos três números é maior que 50");
+        
+		printf("\nA soma é: %i", soma);
+
+    
+
+	return 0;
+
+
+}
+
+
+4 - Construa um algoritmo que leia dois números e efetue a adição. Caso o valor
+somado seja maior que 20, este deverá ser apresentado somando e a ele mais
+8; caso o valor somado seja menor ou igual a 20, este deverá ser apresentado
+subtraindo-se 5
+
+#include <stdio.h>
+
+
+
+int main()
+{
+    
+
+	int nro1, nro2, soma, soma_nro1, soma_nro2;
+
+    
+    
+	printf("Digite um número: ");
+    
+	scanf("%i", &nro1);
+    
+	printf("Digite outro número: ");
+    
+	scanf("%i", &nro2);
+    
+    
+
+	soma = nro1+nro2;
+    
+	soma_nro1 = soma+8;
+    
+	soma_nro2 = soma-5;
+    
+    
+
+	if (soma > 20)
+    
+	{
+        
+		printf("%i + 8 é = %i", soma, soma_nro1);
+    
+	}
+    
+    
+	else
+    
+	{
+        
+		printf("%i - 5 é = %i", soma, soma_nro2);
+    
+	}
+    
+
+	return 0;
+
+
+}
+
+
+5 - Faça um algoritmo para entrar com código, sexo e idade de uma pessoa. Se a
+pessoa for do sexo feminino e tiver menos que 25 anos, imprimir código e
+mensagem: ACEITA. Caso contrário, imprimir código e a mensagem: NÃO
+ACEITA.
+
+#include <stdio.h>
+
+
+
+int main()
+{
+    
+	
+	int idade, cod;
+    	
+	char f;
+
+    
+
+	printf("Digite seu código: ");
+    
+	scanf("%i", &cod);
+    
+	printf("Digite seu sexo, somente com a letra M/F: ");
+    
+	scanf("%s", &f);
+    
+	printf("Digite sua idade: ");
+    
+	scanf("%i", &idade);
+
+    
+	
+	
+	if(idade <= 25 && f == 'F')
+    
+	{
+        
+		printf("O código %i está aceito",cod);
+    
+	}
+    
+
+	else if(idade <= 25 && f == 'f')
+    
+	{
+        
+		printf("O código %i está aceito",cod);
+    
+	}
+    
+
+	else
+    
+	{
+        
+		printf("O código %i não está aceito",cod);
+    
+	}
+    
+    
+
+	return 0;
+
+
+}
+
+
+6 - Fazer um algoritmo que leia o percurso em quilômetros, o tipo do carro e
+informe o consumo estimado de combustível, sabendo-se que um carro tipo C
+faz 12 Km com um litro de gasolina, um tipo B faz 9 Km e o tipo A, 8 Km por
+litro.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{
+    
+
+	float per_km, cons_comb, resp_final;
+    
+	char t;
+    
+    
+
+	printf("Digite o tipo do carro, indentificados como a, b ou c: ");
+    
+	scanf("%c", &t);
+    printf("Digite a distância percorrida em Km: ");
+    
+	scanf("%f", &per_km);
+    
+    
+	
+	
+	if (t == 'a' || t == 'A')
+    
+	{
+        
+		resp_final = per_km/8;
+        
+		printf("O carro A irá consumir: %.2f L", resp_final);
+    
+	}
+    
+    
+
+	else if (t == 'b' || t == 'B')
+    
+	{
+        
+		resp_final = per_km/9;
+        
+		printf("O carro B irá consumir: %.2f L", resp_final);
+    
+	}
+    
+    
+
+	else if (t == 'c' || t == 'C')
+    
+	{
+        
+		resp_final = per_km/12;
+        
+		printf("O carro C irá consumir: %.2f L", resp_final);
+    
+	}
+    
+    
+
+	else 
+    
+	{
+        
+		printf("Este carro não existe");
+    
+	}
+    
+    
+
+	return 0;
+
+
+
+}
+
+
+7 - Faça um algoritmo que verifique a validade de uma senha fornecida pelo
+usuário. A senha válida é o número 1234. OBS: Se a senha informada
+pelo usuário for inválida, a mensagem &quot;ACESSO NEGADO&quot; deve ser exibida.
+Se for a correta, a mensagem "ACESSO PERMITIDO" deverá ser exibida.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{
+    
+
+	int senha;
+    
+    
+
+	printf("Digite sua senha: ");
+    
+	scanf("%i", &senha);
+    
+    
+
+	
+	if (senha == 1224)
+        
+	{
+            
+		printf("Acesso permitido");
+        
+	}
+    
+   
+	
+	else
+        
+	{
+            
+		printf("Acesso negado");
+        
+	}
+    
+    
+    
+
+	return 0;
+
+
+
+}
+
+
+8 - As maçãs custam R$ 1,30 cada se forem compradas menos de uma dúzia, e
+R$ 1,00 se forem compradas pelo menos 12. Escreva um algoritmo que leia o
+número de maçãs compradas, calcule e escreva o custo total da compra.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{
+    
+
+	float nro_macas, total_com1, total_com2;
+    
+    
+	
+	printf("Digite a quantidade de maçãs: ");
+    
+	scanf("%f", &nro_macas);
+    
+    
+
+
+	if (nro_macas < 12)
+        
+	{
+            
+		total_com1 = nro_macas*1.30;
+            
+		printf("O valor da compra é: R$ %.2f",total_com1);
+        
+	}
+        
+    
+
+	else if (nro_macas >= 12)
+        
+	{
+            
+		total_com2 = nro_macas*1.00;
+            
+		printf("O valor da compra é: R$ %.2f",total_com2);
+        
+	}
+    
+    
+
+	return 0;
+
+
+
+}
+
+
+9 - Faça um algoritmo para ler o codigo de 2 times e o número de gols marcados
+na partida (para cada time). Escrever o codigo do vencedor. Caso não haja
+vencedor deverá ser impressa a palavra EMPATE.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{
+
+
+	int gols1, gols2, time1, time2;
+
+	printf("Digite o código do time 1: ");
+    	scanf("%i", &time1);
+    	printf("Digite os gols do time: ");
+    	scanf("%i", &gols1);
+    	printf("Digite o código do time 2: ");
+    	scanf("%i", &time2);
+    	printf("Digite os gols do time: ");
+    	scanf("%i", &gols2);
+
+	
+	if (gols1 > gols2)
+	{
+        	printf("O ganhador é %i ", time1);
+	}   
+    	else if (gols1 < gols2)
+	{  
+        	printf("O ganhador é %i ", time2);
+	}   
+    	else 
+	{   
+        	printf("O jogo terminou em empate");
+	}
+
+	return 0;
+
+}
+
+
+10 - Faça um algoritmo para ler: número da conta do cliente, saldo, débito e crédito.
+Após, calcular e escrever o saldo atual (saldo atual = saldo - débito + crédito).
+Também testar se saldo atual for maior ou igual a zero escrever a mensagem
+&#39;Saldo Positivo&#39;, senão escrever a mensagem &#39;Saldo Negativo&#39;.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{   
+    
+
+	float nro_cliente, saldo_atual, saldo, deb, cred;
+
+    
+
+	printf("Digite o número da conta: ");
+    
+	scanf("%f", &nro_cliente);
+    
+	printf("Digite o saldo: R$ ");
+    
+	scanf("%f", &saldo);
+    
+	printf("Digite o valor do débito atual: R$ ");
+    
+	scanf("%f", &deb);
+    
+	printf("Digite o valor do crédito atual: R$ ");
+    
+	scanf("%f", &cred);
+
+    
+
+	if (saldo_atual >= 0)
+    
+	{
+        
+		saldo_atual = (saldo-deb)+cred;
+            
+		printf("Seu saldo atual é: R$ %.2f", saldo_atual);
+            
+		printf("\nSaldo Positivo");
+    
+	}
+
+    
+	
+	else
+    
+	{
+            
+		printf("Seu saldo atual é: R$ %.2f", saldo_atual);
+            
+		printf("\nSaldo Negativo");
+    
+	}
+    
+    
+
+	return 0;
+
+
+
+}
+
+
+11 - Faça um algoritmo para ler: quantidade atual em estoque, quantidade máxima
+em estoque e quantidade mínima em estoque de um produto. Calcular e
+escrever a quantidade média ((quantidade média = quantidade máxima +
+quantidade mínima)/2). Se a quantidade em estoque for maior ou igual a
+quantidade média escrever a mensagem &#39;Não efetuar compra&#39;, senão escrever
+a mensagem &#39;Efetuar compra&#39;.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{   
+    
+	int  q_atual_est, q_max_est, q_min_est, q_md_est;
+    
+    
+
+	printf("Calculo da média de um produto");
+    
+	printf("\nDigite a quantidade atual em estoque: ");
+    
+	scanf("%i", &q_atual_est);
+    
+	printf("Digite a quantidade máxima em estoque: ");
+    
+	scanf("%i", &q_max_est);
+    
+	printf("Digite a quantidade mínima em estoque: ");
+    
+	scanf("%i", &q_min_est);
+    
+    
+
+	q_md_est = (q_max_est+q_min_est)/2;
+    
+    
+
+	printf("A quantidade média em estoque é: %i", q_md_est);
+    
+    
+
+	if (q_atual_est >= q_md_est)
+    
+	{
+        
+		printf("\nNão efetuar a compra");
+    
+	}
+    
+    
+
+	else
+        
+	{
+            
+		printf("\nEfetuar a compra");
+        
+	}
+   
+    
+
+	return 0;
+
+
+}
+
+
+12 - Faça um algoritmo para reajustar o salário de acordo com a função. Se for
+técnico, aumentar o salário 50%, se for gerente, aumentar 30% e se for outro
+cargo, aumentar 20%.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{
+    
+
+	float salario, total, cargo;
+    
+    
+	printf("Digite 1 para técnico, 2 para gerente ou 3 para outros cargos: ");
+    
+	scanf("%f", &cargo);
+    
+	printf("Digite o valor do sálario: R$");
+    
+	scanf("%f", &salario);
+    
+    
+
+	if (cargo == 1)
+    
+    
+	{
+        
+		total = (salario/100)*150;
+        
+		printf("Seu sálario será de: R$ %.2f", total);
+    
+	}
+
+    
+    
+	else if (cargo == 2)
+   
+    
+	{
+        
+		total = (salario/100)*130;
+        
+		printf("Seu sálario será de : R$ %.2f", total);
+    
+	}
+    
+    
+
+	else
+  
+    
+	{   
+        
+		total = (salario/100)*120;
+        
+		printf("Seu sálario será de: R$ %.2f", total);
+    
+	}
+
+    
+
+	return 0;
+
+
+}
+
+
+13 - Faça um programa que receba o valor da venda, escolha a condição de
+pagamento no menu e mostre o total da venda final conforme condições a
+seguir:
+1 - Venda a Vista - desconto de 10%
+2 - Venda a Prazo 30 dias - desconto de 5%
+3 - Venda a Prazo 60 dias - mesmo preço
+4 - Venda a Prazo 90 dias - acréscimo de 5%
+5 - Venda com cartão de débito - desconto de 8%
+6 - Venda com cartão de crédito - desconto de 7%
+
+#include <stdio.h>
+
+
+
+int main()
+
+{   
+    
+
+	int cond;
+    
+	float valor_vend, porc;
+    
+    
+	
+	printf("Qual o valor da venda: R$ ");
+    
+	scanf("%f", &valor_vend);
+    
+	printf("Digite 1-Venda a Vista, 2-Venda a Prazo 30 dias, 3-Venda a Prazo 60 dias,\n4-Venda a Prazo 90 dias, 5-Venda com cartão de débito e 6-Venda com cartão de crédito:  ");
+    
+	scanf("%i", &cond);
+    
+    
+
+	if (cond == 1)
+    
+	{
+        
+		porc = valor_vend/100*10;
+        
+		printf("O valor é: R$ %.2f", valor_vend-porc);
+    
+	}
+    
+    
+
+	else if (cond == 2)
+    
+	{
+        
+		porc = valor_vend/100*5;
+        
+		printf("O valor é: R$ %.2f", valor_vend-porc);
+    
+	}
+    
+    
+
+	else if (cond == 3)
+    
+	{
+        
+		printf("O valor é: R$ %.2f", valor_vend);
+    
+	}
+    
+    
+
+	else if (cond == 4)
+    
+	{
+        
+		porc = valor_vend/100*5;
+        
+		printf("O valor é: R$ %.2f", valor_vend+porc);
+    
+	}
+    
+    
+
+	else if (cond == 5)
+    
+	{
+        
+		porc = valor_vend/100*8;
+        
+		printf("O valor é: R$ %.2f", valor_vend-porc);
+    
+	}
+    
+    
+
+	else
+    
+	{
+        
+		porc = valor_vend/100*7;
+        
+		printf("O valor é: R$ %.2f", valor_vend-porc);
+    
+	}
+    
+    
+
+	return 0;
+
+
+}
+
+
+14 - Construa um algoritmo que leia um número inteiro de 1 a 7 e informe o dia da
+semana correspondente, sendo domingo o dia de número 1. Se o número não
+corresponder a um dia da semana, mostre uma mensagem de erro.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{
+    
+
+	int nro;
+    
+    
+	printf("Digite um número de 1 a 7: ");
+    
+	scanf("%i", &nro);
+    
+    
+
+	switch (nro){
+        
+		case 1:
+ 
+			printf("Domingo");           
+			printf("erro");
+            
+			break;
+            
+        
+
+		case 2:
+            
+			printf("Segunda-feira");
+            
+			break;
+            
+        
+
+		case 3:
+            
+			printf("terça-feira");
+            
+			break;
+            
+        
+
+		case 4:
+            
+			printf("Quarta-feira");
+            
+			break;
+            
+        
+
+		case 5:
+            
+			printf("Quinta-feira");
+            
+			break;
+            
+        
+
+		case 6:
+            
+			printf("Sexta-feira");
+            
+			break;
+            
+        
+
+		case 7:
+ 
+			printf("Sábado");           
+			printf("erro");
+            
+			break;
+            
+        
+
+		default:
+            
+			printf("Opção não valida");
+            
+			break;
+    
+		}
+        
+    
+
+	return 0;
+
+
+}
+
+15 - Crie um algoritmo que solicita ao usuário para digitar um número e mostra-o
+por extenso. Este número deve variar entre 1 e 10. Se o usuário introduzir um
+número que não está neste intervalo, mostre: "Número inválido".
+
+#include <stdio.h>
+
+
+
+int main()
+
+{
+    
+
+	int nro;
+    
+    
+	
+	printf("Digite um número de 1 a 10: ");
+    
+	scanf("%i", &nro);
+    
+    
+
+	switch (nro){
+        
+        
+
+		case 1:
+            
+			printf("Um");
+            
+			break;
+            
+        
+		
+		case 2:
+            
+			printf("Dois");
+            
+			break;
+            
+        
+
+		case 3:
+            
+			printf("Três");
+            
+			break;
+            
+        
+
+		case 4:
+            
+			printf("Quatro");
+            
+			break;
+            
+        
+
+		case 5:
+            
+			printf("Cinco");
+            
+			break;
+            
+        
+
+		case 6:
+            
+			printf("Seis");
+            
+			break;
+            
+        
+
+		case 7:
+            
+			printf("Sete");
+            
+			break;
+            
+        
+
+		case 8:
+            
+			printf("Oito");
+            
+			break;
+            
+        
+
+		case 9:
+            
+			printf("Nove");
+            
+			break;
+            
+        
+		
+		case 10:
+            
+			printf("Dez");
+            
+			break;
+            
+        
+
+		default:
+            
+			printf("Número inválido");
+            
+			break;
+    
+		}
+        
+    
+
+	return 0;
+
+
+}
+
+
+
+Exercícios da aula do dia 01/04/2020
+
+1 - Faça um algoritmo que leia dois números. Depois pergunte se o usuário deseja
+somar, subtrair, multiplicar 
+ou dividir estes números. Realize a operação
+ matemática que ele escolheu e logo após escreva na tela o resultado.
+
+
+#include <stdio.h>
+
+
+
+int main()
+
+{   
+    
+	
+	int nro1, nro2;
+	float op;    
+    
+	
+	printf("Digite dois números inteiros: ");
+    
+	scanf("%i", &nro1);
+    
+	scanf("%i", &nro2);
+    
+	printf("Escolha 1 para somar, 2 para subtrair, 3 para multiplicar e 4 para dividir: ");
+    
+	scanf("%f", &op);
+    
+    
+
+	switch (op){
+        
+		case 1:
+            
+			op = (float) nro1+nro2;
+            
+			printf("A soma é: %.2f", op);
+            
+			break;
+            
+        
+
+		case 2:
+            
+			op = (float) nro1-nro2;
+            
+			printf("A subtração é: %.2f", op);
+            
+			break;
+        
+        
+
+		case 3:
+            
+			op = (float) nro1*nro2;
+            
+			printf("A multiplicação é: %.2f", op);
+            
+			break;
+            
+        
+
+		case 4:
+            
+			op = (float) nro1/nro2;
+            
+			printf("A divisão é: %.2f", op);
+            
+			break;
+            
+        
+
+		default:
+            
+			printf("Operação invalida");
+            
+			break;
+    
+		}
+    
+    
+
+	return 0;
+
+
+}
+
+
+2 - Faça um algoritmo que leia um número. Se o número for 1, escreva o número. Se o
+número for 2, 
+escreva o dobro do número. Se o número for 3, escreva o triplo do
+número. Se for outro número, 
+escreva a mensagem “número não esperado”.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{   
+  
+
+	int nro;
+    
+    
+
+	printf("Digite um número de 1 a 3: ");
+    
+	scanf("%i", &nro);
+    
+    
+
+	switch (nro){
+        
+        
+		case 1: 
+            
+			printf("O número é um");
+            
+			break;
+            
+        
+
+		case 2:
+            
+			printf("O número é 4");
+            
+			break;
+            
+        
+
+		case 3:
+            
+			printf("O número é 9");
+            
+			break;
+            
+        
+
+		default:
+            
+			printf("Operação invalida");
+            
+			break;
+    
+
+	}
+    
+    
+
+	return 0;
+
+
+}
+
+
+3 - A - Escrever um algoritmo que leia um código e três valores: a, b e c. Os códigos
+
+válidos são 1, 2, 3, 4 e 5. Se o código for diferente destes,
+apresentar a mensagem
+"CÓDIGO INVÁLIDO" e terminar o programa.
+
+
+- código = 1: multiplicar os três valores;
+
+- código = 2: somar os três valores;
+
+- código = 3: subtrair os três valores;
+
+- código = 4: somar o quadrado dos 3 valores;
+
+- código = 5: apenas escrever os 3 valores.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{   
+
+	int cod, val_a, val_b, val_c, result;
+    
+    
+	
+	printf("Digite um código, as opções são: 1, 2, 3, 4 ou 5\n");
+    
+	scanf("%i", &cod);
+    
+	printf("Digite 3 números:\n");
+    
+	scanf("%i", &val_a);
+    
+	scanf("%i", &val_b);
+    
+	scanf("%i", &val_c);
+    
+    
+
+	switch (cod){
+        
+        
+		
+		case 1:
+            
+			result = val_a*val_b*val_c;
+            
+			printf("A multiplicação de %i*%i*%i = %i", val_a, val_b, val_c, result);
+            
+			break;
+            
+        
+
+		case 2:
+            
+			result = val_a+val_b+val_c;
+            
+			printf("A soma de %i+%i+%i = %i", val_a, val_b, val_c, result);
+            
+			break;
+            
+        
+
+		case 3:
+            
+			result = val_a-val_b-val_c;
+            
+			printf("A subtração de %i-%i-%i = %i", val_a, val_b, val_c, result);
+            
+			break;
+            
+        
+
+		case 4:
+            
+			result = val_a*val_a+val_b*val_b+val_c*val_c;
+            
+			printf("A soma do quadrado de %i de %i e %i = %i", val_a, val_b, val_c, result);
+            
+			break;
+            
+        
+
+		case 5:
+            
+			printf("Os números são %i, %i e %i", val_a, val_b, val_c);
+            
+			break;
+            
+        
+
+		default:
+            
+			printf("Operação inválida");
+            
+			break;
+    
+		}
+
+	return 0;
+
+
+}
+
+
+3 - B "não encontrei o erro, tentei melhorar o código" - Escrever um algoritmo que leia um código e 
+três valores: a, b e c. Os códigos válidos são 1, 2, 3, 4 e 5. Se o código for diferente destes,
+apresentar a mensagem
+"CÓDIGO INVÁLIDO" e terminar o programa.
+
+
+- código = 1: multiplicar os três valores;
+
+- código = 2: somar os três valores;
+
+- código = 3: subtrair os três valores;
+
+- código = 4: somar o quadrado dos 3 valores;
+
+- código = 5: apenas escrever os 3 valores.
+
+#include <stdio.h>
+
+
+
+int main()
+
+{   
+    
+
+	int cod, val_a, val_b, val_c, result;
+    
+    
+
+	printf("Digite um código, as opções são: 1, 2, 3, 4 ou 5\n");
+    
+	scanf("%i", &cod);
+    printf("Digite 3 números:\n");
+    
+	scanf("%i", &val_a);
+    
+	scanf("%i", &val_b);
+    
+	scanf("%i", &val_c);
+    
+    
+
+	if (cod != 1, 2, 3, 4, 5)
+        
+	{	
+		printf("Código invalido");
+    
+    
+	}
+	
+	else if
+        
+		switch (cod){
+        
+        
+
+			case 1:
+            
+				result = val_a*val_b*val_c;
+            
+				printf("A multiplicação de %i*%i*%i = %i", val_a, val_b, val_c, result);
+            
+				break;
+            
+        
+
+			case 2:
+            
+				result = val_a+val_b+val_c;
+            
+				printf("A soma de %i+%i+%i = %i", val_a, val_b, val_c, result);
+            
+				break;
+            
+        
+
+			case 3:
+            
+				result = val_a-val_b-val_c;
+            
+				printf("A subtração de %i-%i-%i = %i", val_a, val_b, val_c, result);
+            
+				break;
+            
+        
+
+			case 4:
+            
+				result = val_a*val_a+val_b*val_b+val_c*val_c;
+            
+				printf("A soma do quadrado de %i de %i e %i = %i", val_a, val_b, val_c, result);
+            
+				break;
+            
+        
+
+			case 5:
+            
+				printf("Os números são %i, %i e %i", val_a, val_b, val_c);
+            
+				break;
+            
+    
+
+		}
+    
+    
+
+	return 0;
+
+
+}
+
+
+4 - Escreva um algoritmo que tendo como dados de entrada o preço de um produto e
+
+um código de origem emita o preço junto de sua procedência. Caso o código não
+
+seja nenhum dos especificados o produto é considerado importado. Os códigos de
+
+origem são os seguintes:
+1 sul           5 nordeste
+
+2 norte         6 sudeste
+
+3 leste         7 centro oeste
+
+4 oeste         8 noroeste
+
+#include <stdio.h>
+
+
+
+int main()
+
+{   
+    
+
+	float val_prod;
+    
+	int cod_orig;
+    
+    
+
+	printf("Digite o código do produto, as opcões são 1, 2, 3, 4, 5, 6, 7 ou 8:\n");
+    
+	scanf("%i", &cod_orig);
+    printf("Digite o valor do produto: R$");
+    
+	scanf("%f", &val_prod);
+    
+    
+
+	switch (cod_orig){
+        
+        
+
+		case 1:
+            
+			printf("Origem do produto: Sul\n");
+            
+			printf("Valor do produto: R$ %.2f", val_prod);
+            
+			break;
+            
+        
+
+		case 2:
+            
+			printf("Origem do produto: Norte\n");
+            
+			printf("Valor do produto: R$ %.2f", val_prod);
+            
+			break;
+            
+        
+
+		case 3:
+            
+			printf("Origem do produto: Leste\n");
+            
+			printf("Valor do produto: R$ %.2f", val_prod);
+            
+			break;
+            
+        
+
+		case 4:
+            
+			printf("Origem do produto: Oeste\n");
+            
+			printf("Valor do produto: R$ %.2f", val_prod);
+            
+			break;
+            
+        
+
+		case 5:
+            
+			printf("Origem do produto: Nordeste\n");
+            
+			printf("Valor do produto: R$ %.2f", val_prod);
+            
+			break;
+            
+        
+
+		case 6:
+            
+			printf("Origem do produto: Sudeste\n");
+            
+			printf("Valor do produto: R$ %.2f", val_prod);
+            
+			break;
+        
+        
+
+		case 7:
+            
+			printf("Origem do produto: Centro Oeste\n");
+            
+			printf("Valor do produto: R$ %.2f", val_prod);
+            
+			break;
+            
+        
+
+		case 8:
+            
+			printf("Origem do produto: Noroeste\n");
+            
+			printf("Valor do produto: R$ %.2f", val_prod);
+            
+			break;
+            
+        
+
+		default:
+            
+			printf("Produto importado\n");
+            
+			printf("Valor do produto: R$ %.2f", val_prod);
+            
+			break;
+    
+		}
+    
+    
+
+	return 0;
+
+
+}
+
+
+5 - Um vendedor necessita de um algoritmo que calcule o preço total devido por um
+
+cliente. O algoritmo deve receber o código de um produto e a quantidade comprada
+
+e calcular o preço total, usando a tabela abaixo:
+Código Produto      Preço Unitário
+    
+	1001                5,32
+    
+	1324                6,45
+    
+	6548                2,37
+    
+	0987                5,32
+    
+	7623                6,45

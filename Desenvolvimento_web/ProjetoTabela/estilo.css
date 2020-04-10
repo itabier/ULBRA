@@ -1,0 +1,307 @@
+/*a:link, a:visited{
+	color: #fff;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+.topo {
+	background-color: blue;
+	height: 85px;
+}
+
+header h2 {
+	padding: 10px 0px 0px 30px;
+	color: white;
+}
+header nav ul{
+	list-style: none;
+	padding-left: 
+}
+header nav ul li{
+	display: inline-block;
+	margin-left: 140px;
+
+}
+header nav ul li a {
+	font-size: 13px;
+}
+.folha1 {
+	width: 880px;
+	margin: auto;
+	background: #fff;
+	padding: 0px 15px 0px 15px;
+	border: 1px solid black
+}
+
+table tr td img{
+	width: 25px;
+}
+
+table th td {
+	border-bottom: blueviolet;
+	border-collapse: collapse;
+
+}
+table {
+
+	width: 100%;
+  }
+td {
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 8px;
+  }
+tr:hover td{
+	background-color: Gainsboro;
+	color: black
+}
+
+  
+.circle {
+	height: 15px;
+	width: 15px;
+	background-color: forestgreen;
+	border-radius: 50%;
+	float: right;
+	
+}
+.circle1 {
+	height: 15px;
+	width: 15px;
+	background-color: gray;
+	border-radius: 50%;
+	float: right;
+	
+}
+
+.circle2 {
+	height: 15px;
+	width: 15px;
+	background-color: red;
+	border-radius: 50%;
+	float: right; */
+
+/* Tabela Copa */
+*{
+	margin: 0 auto;
+}
+
+body{
+	background-color: #e2e2e2;
+}
+
+.divTudo{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.divLinha{
+	clear: both;
+}
+
+/* estilos de cabeçalho geral */
+.divCabecalho{
+	background-color: #162E58;
+	min-height: 100px;
+	padding: 30px 50px 10px 50px;
+	position: relative;
+}
+
+#h1TituloCabecalho{
+	color: #ffffff;
+	float: left;
+	min-width: 50%;
+	font-size: 16px;
+	text-align: left;
+}
+
+.menu{
+	text-align: center;
+	clear: both;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-left: 16%;
+	
+}
+
+.itemMenu{
+	float: left;
+	text-align: center;
+	width: 12%;
+	height: 40px;
+}
+
+/*
+ul.inline li{
+	display: inline;
+	margin-right: 15px;
+	color: #e2e2e2;
+	cursor: pointer;
+	
+}
+
+.menu li a{
+	border-radius: 3px;
+	padding: 5px 10px;
+}
+*/
+.itemMenu a:hover{
+	
+	background: #483D8B;
+}
+
+li a{
+	color: #ffffff;
+}
+
+/* estilos classificação */
+#divClassificacao{
+	width: 50%;
+}
+
+.tableClassificacao{
+	width: 100%;
+	background-color: #ffffff;
+}
+
+#h3TituloGrupo{
+	font-size: 14px;
+	padding: 5px 5px;
+}
+
+table tr td img{
+	width: 20px;
+	height: 20px;
+}
+
+th{
+	text-align: center;
+	font-size: 14px;
+	color: darkgray;
+	font-weight: normal;
+}
+
+td{
+	text-align: center;
+	font-size: 14px;
+}
+
+table, td, th{
+	padding: 7px 7px;
+	border-bottom: solid 1px #e2e2e2;
+	border-collapse: collapse;
+}
+
+.thNomeClube{
+	width: 50%;
+}
+
+.tdPosicao{
+	width: 3%;
+	font-size: 14px;
+}
+
+.tdNomeClube{
+	text-align: left;
+}
+
+.tdImgClube{
+	width: 5%;
+}
+
+.thUltimas{
+	width: 20%;
+}
+
+.circle {
+	height: 15px;
+	width: 15px;
+	background-color: forestgreen;
+	border-radius: 50%;
+	float: right;
+	margin-right: 5px;	
+}
+.circle1 {
+	height: 15px;
+	width: 15px;
+	background-color: gray;
+	border-radius: 50%;
+	float: right;
+	margin-right: 5px;		
+}
+
+.circle2 {
+	height: 15px;
+	width: 15px;
+	background-color: red;
+	border-radius: 50%;
+	float: right;
+	margin-right: 5px;	
+}
+
+tr:hover td{
+	background-color: Gainsboro;
+	color: black
+}
+
+/* estilo goleadores */
+#divGoleadores{
+	width: 50%;
+}
+
+#tableGoleadores{
+	width: 100%;
+	background-color: #ffffff;
+}
+
+#tableGoleadores td{
+	padding: 20px 10px 10px 10px;
+}
+
+.tdJogador{
+	text-align: left;
+	width: 90%;
+}
+
+.spanNomeClube{
+	color: darkgray;
+	font-size: 12px;
+}
+
+/* estilos partidas */
+#divJogos{
+	width: 50%;
+}
+
+#tableJogos{
+	width: 100%;
+	background-color: #ffffff;
+}
+
+#tableJogos .tdTableJogos{
+	padding: 20px 50px 0px;
+}
+
+#tableJogos .tdTableJogo{
+	width: 100%;
+}
+
+/* estilo da tabela de cada jogo */
+.tableJogo .thTableJogo{
+	text-align: center;
+}
+
+.tableJogo .tdClube{
+	width: 60px;
+	text-align: center;
+}
+
+.tableJogo .tdHorario{
+	text-align: center;
+}
+
+#tableJogos th, #tableJogos td{
+	border-bottom: 0px;
+}
