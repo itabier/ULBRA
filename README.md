@@ -1,2 +1,2 @@
 # ULBRA
-Trabalhos de desenvolvimento web e algoritmos
+Trabalhos de desenvolvimento web, algoritmos, introdução a computação e princípios de segurança e rede de computadores.
