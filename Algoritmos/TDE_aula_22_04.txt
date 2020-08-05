@@ -1,0 +1,236 @@
+Exercícios do dia 22/04/2020 - repetição determinada - ciclo for
+
+1 - ESCREVA UM ALGORITMO PARA ESCREVER A PALAVRA PROGRAMACAO 5
+VEZES UTILIZANDO UMA ESTRUTURA DE REPETIÇÃO.
+
+#include <stdio.h>
+
+int main()
+{
+    int contador, numero = 1;
+    
+    for (contador = 1; contador <= 5; contador = contador + 1){
+        printf("PROGRAMAÇÃO\n");
+    }
+
+    return 0;
+}
+
+
+2 - ESCREVA UM ALGORITMO PARA LER UM NÚMERO INTEIRO E ESCREVÊ-LO NA TELA
+10 VEZES UTILIZANDO UMA REPETIÇÃO.
+
+#include <stdio.h>
+
+int main()
+{
+    int contador, numero;
+    
+    printf("Digite um número interiro: ");
+    scanf("%i", &numero);
+    
+    for (contador = 1; contador <= 10; contador = contador + 1){
+        printf("%i\n", numero);
+    }
+
+    return 0;
+}
+
+
+3 - ESCREVA UM ALGORITMO QUE IMPRIMA NA TELA OS 10 PRIMEIROS NÚMEROS
+INTEIROS MAIORES QUE 100 UTILIZANDO UMA ESTRUTURA DE REPETIÇÃO.
+
+#include <stdio.h>
+
+int main()
+{
+    int contador;
+    
+    for (contador = 101; contador <= 110; contador = contador + 1){
+        printf("%i\n", contador);
+    }
+    return 0;
+}
+
+
+4 - ESCREVA UM ALGORITMO QUE IMPRIMA OS NÚMEROS ÍMPARES EXISTENTES DE
+ENTRE 1(INCLUSIVE) E 9(INCLUSIVE).
+
+#include <stdio.h>
+
+int main()
+{  
+    int x, imp = 1, cont = -1;
+
+    for (x = 1; x <= 5; x++){
+    	cont=cont+2;
+    	printf("%i \n",cont);
+    }
+    return 0;
+}
+
+
+5 - ESCREVA UM ALGORITMO PARA LER UM VALOR N IMPRIMIR OS N PRIMEIROS
+NÚMEROS INTEIROS.
+
+#include <stdio.h>
+
+int main()
+{
+    int contador = 1, numero;
+    
+    printf("Digite um numero inteiro: ");
+    scanf("%i", &numero);
+    
+    for (contador = 1; contador <= numero; contador = contador + 1){
+        printf("%i\n", contador);
+    }
+    
+    return 0;
+}
+
+
+6 - ESCREVA UM ALGORITMO QUE IMPRIMA A TABUADA DO 8 UTILIZANDO UMA
+ESTRUTURA DE REPETIÇÃO.
+
+#include <stdio.h>
+
+int main()
+{
+    int contador, numero = 8;
+    
+    for (contador = 0; contador <= 10; contador = contador + 1)
+        printf("%i x %i = %i\n", numero, contador, numero*contador);
+        
+    
+    return 0;
+}
+
+
+7 - ESCREVA UM ALGORITMO PARA LER UM VALOR X. ESCREVER A TABUADA DE X.
+
+#include <stdio.h>
+
+int main()
+{
+    int contador, numero;
+    
+    printf("Digite um numero da tabuada: ");
+    scanf("%i", &numero);
+    
+    for (contador = 0; contador <= 10; contador = contador + 1){
+        printf("%i x %i = %i\n", numero, contador, numero*contador);
+    }
+        
+    return 0;
+}
+
+
+8 - LER 10 VALORES E ESCREVER QUANTOS DESTES VALORES SÃO NEGATIVOS.
+
+#include <stdio.h>
+
+int main()
+{
+    int x, valor, cont;
+
+    for (x = 1; x <= 10; x++){
+    	printf("digite um numero inteiro: ");
+    	scanf("%i", &valor);
+    	if(valor<0){
+    	cont=cont+1;
+    }
+    }
+     printf("voçê digitou %i numeros negativos!",cont);
+    return 0;
+}
+
+
+9. LER 10 VALORES E CONTAR QUANTOS ESTÃO NO INTERVALO [10,20] E QUANTOS
+DELES ESTÃO FORA DESTE INTERVALO. ESCREVER O RESULTADO DAS DUAS
+CONTAGENS.
+
+#include <stdio.h>
+
+int main()
+{
+    int x, valor, cont=0,resul ;
+    for (x=1; x<=10; x++){
+    printf("digite um numero inteiro: ");
+    scanf("%i", &valor);
+    if((valor>=10)&&(valor<=20)){
+       cont=cont+1;
+    }
+    }
+     printf("voçê digitou %i numeros no intervalo de 10 e 20!\n",cont);
+     resul=10-cont;
+     printf("voçê digitou %i numeros fora do intervalo de 10 e 20!",resul);
+    return 0;
+}
+
+
+10. ESCREVA UM PROGRAMA QUE IMPRIMA A TABUADA  (de 1 a 10) PARA OS NUMEROS DE  1 a  5.
+#include <stdio.h>
+
+int main()
+{
+    int resul, cont, x;
+    
+    for (x=1; x<=10; x++){
+    resul =1*x;
+    printf("%i \n",resul);
+    }
+    for (x=1; x<=10; x++){
+    resul =2*x;
+    printf("%i \n",resul);
+    }
+    for (x=1; x<=10; x++){
+    resul =3*x;
+    printf("%i \n",resul);
+    }
+    for (x=1; x<=10; x++){
+    resul =4*x;
+    printf("%i \n",resul);
+    }
+    for (x=1; x<=10; x++){
+    resul =5*x;
+    printf("%i \n",resul);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ciclo While
+
+5 - ESCREVA UM ALGORITMO PARA LER UM VALOR N IMPRIMIR OS N PRIMEIROS
+NÚMEROS INTEIROS.
+
+#include <stdio.h>
+
+int main()
+{
+    int contador = 1, numero;
+    
+    printf("Digite um numero inteiro: ");
+    scanf("%i", &numero);
+    
+    while (contador <= numero){
+        printf("%i\n", contador);
+        contador = contador +1;
+    }
+    
+    return 0;
+}

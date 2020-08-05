@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TDE Manipulando a DOM com JS</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <!-- /bootstrap -->
+</head>
+<body>
+    <div id="wrap">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#calc">CALC</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kwh">KWH</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#maiorNum">>NUM</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#maiorMenor">+IDAD-</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#imc">IMC</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pl">PL</a> 
+                </li>
+            </ul>
+        </nav>
+        <header class="jumbotron text-center">
+            <h1>Exercícios em HTML CSS e JS</h1>
+        </header>
+        
+        <main class="container">
+
+            <div class="row">
+                <div class="col-md-12 grid1">
+                    <section id="calc" data-anime="left">
+                        <h2>Calculadora</h2><br>
+                        <form onsubmit="return false" class="formCalc">
+                            <div class="flex">
+                                <input type="text" id="num1" class="selectModal" placeholder="Primeiro valor" />
+                                <select id="operacoes">
+                                    <option value="escolha">Escolha a operação</option>
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                    <option value="*">*</option>
+                                    <option value="/">/</option>
+                                </select>
+                                <input type="text" id="num2" placeholder="Segundo valor" />
+                            </div>
+                            <input type="submit" onclick="calcular();" value="Calcular" />
+                            <input type="submit" value="Limpar" onclick="limpar();" />
+                            <p id="resultadoFinal">Resultado</p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <section id="kwh" data-anime="right">
+                        <h2>Cálculo do Consumo de Energia</h2><br>
+                        <form onsubmit="return false">
+                            <div class="flex">
+                                <input type="text" name="qtdKwh" id="qtdKwh" placeholder="Digite a quantidade de Kwh" />
+                                <input type="text" name="valorKwh" id="valorKwh" placeholder="Digite o valor do Kwh" /><br>
+                                <input type="submit" value="Calcular" onclick="clicar();" />
+                                <p id="resultado2">Resultado</p>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="row">
+                <div class="col-md-12 grid1">
+                    <section id="maiorNum" data-anime="left">
+                        <h2>Cálculo do Maior Número</h2><br>
+                        <form onsubmit="return false">
+                            <div class="flex">
+                                <input type="text" name="numeros" id="numeros" placeholder="Digite valores separados por vírgula" /><br>
+                                <input type="submit" value="Ver maior" onclick="verificaMaior();" />
+                                <p id="resultado3">Resultado</p>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="row">
+                <div class="col-md-12 grid1">
+                    <section id="maiorMenor" data-anime="right">
+                        <h2>Cálculo de Maior e Menor Idade</h2><br>
+                        <form onsubmit="return false">
+                            <div class="flex">
+                                <input type="text" name="idades" id="idades" placeholder="Digite valores separados por vírgula" /><br>
+                                <input type="submit" value="Ver idades" onclick="verificaIdades();" />
+                                <p id="resultado4">Resultado</p>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="row">
+                <div class="col-md-12 grid1">
+                    <section id="imc" data-anime="left">
+                        <h2>Cálculo de IMC</h2><br>
+                        <form onsubmit="return false">
+                            <div class="flex">
+                                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" /><br>
+                                <input type="text" name="sexo" id="sexo" placeholder="Digite seu sexo" /><br>
+                                <input type="text" name="peso" id="peso" placeholder="Digite seu peso" /><br>
+                                <input type="text" name="altura" id="altura" placeholder="Digite sua altura" /><br>
+                                <input type="submit" value="Ver IMC" onclick="verificaIMC();" />
+                                <p id="resultado5">Resultado</p>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="row">
+                <div class="col-md-12 grid1">
+                    <section id="pl" data-anime="right">
+                        <h2>Portas Lógicas</h2><br>
+                        <form onsubmit="return false">
+                            <div class="flex">
+	                            <label for="a">Variável A</label>
+                                <select name="a" id="a">
+                                    <option value="true">True</option>
+                                    <option value="false">False</option>
+                                </select>
+                                <br><br>
+                                <label for="b">Variável B</label>
+                                <select name="b" id="b">
+                                    <option value="true">True</option>
+                                    <option value="false">False</option>
+                                </select>
+                                <br><br>
+                                <label for="porta">Selecione a porta</label>
+                                <select name="porta" id="porta">
+                                    <option value="not">Not</option>
+                                    <option value="and">And</option>
+                                    <option value="or">Or</option>
+                                    <option value="xor">Xor</option>
+                                </select>
+                                <br><br>
+                                <input type="submit" onclick="verificar()" value="Verificar">
+                                <br><br>
+                                <label id="resultado">Resultado</label>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+        </main>
+        <footer class="jumbotron text-center">
+            <p><strong>Primeiro semestre 2020 - ULBRA - Desenvolvimento Web</strong></p>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+    
+</body>
+</html>

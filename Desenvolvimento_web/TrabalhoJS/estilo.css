@@ -1,0 +1,154 @@
+body, p, h1, h2, ul, li{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font-family: "Vollkorn", Georgia, serif;
+}
+
+/* header */
+header{
+    background: linear-gradient(135deg, #A23030, #C01515) !important;
+    margin-bottom: 0 !important;
+    color: white;
+    margin-top: 55px !important;
+   
+}
+
+/* Container */
+.container{
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+
+/* Content Calculadora */
+
+.valores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+select {
+    width: 15%;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+}
+
+select:focus {
+    outline: none;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    background-color: #cecece;
+}
+
+input[type=submit]:focus {
+    outline: none;
+}
+
+.formCalc input[type=submit] {
+    width: 30%;
+    
+    border: 1px solid black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+
+    font-size: 20px;
+
+    transition: 500ms;
+}
+
+.formCalc p{
+    
+    font-size: 25px;
+    
+    /*border: 1px solid black;
+    border-radius: 8px;
+        
+    width: 40%;
+    min-height: 30px;
+    
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;*/
+}
+
+/* Content Consumo de Energia */
+
+#valorKwh{
+    margin-top: 20px;
+}
+
+#resultado2{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+input[type=submit] {
+    max-width: 50%;
+    
+    border: 1px solid black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+
+    font-size: 20px;
+
+    transition: 500ms;
+}
+
+/* Content Maior Número */
+
+#resultado3{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+/* Content Maior e Menor Idade */
+
+#resultado4{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+/* Content Calculo IMC */
+
+#resultado5{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+/* Content Portas Lógicas */
+
+#variavel_b{
+    margin-top: 20px;
+}
+
+#result{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, #A23030, #C01515) !important;
+    margin-bottom: 0 !important;
+    color: white;
+}

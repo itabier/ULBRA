@@ -1,0 +1,10 @@
+1) Com base no artigo "Tolerância a falhas: conceitos e exemplos" da professora Taisy Silva Weber
+do Programa de Pós-Graduação em Computação - Instituto de Informática - UFRGS, faça uma pequena
+análise da sessão "1 Introdução", resumindo a abordagem feita pela autora.
+
+
+A autora fala sobre uma realidade cada vez mais necessária que seria a proteção em tempo real de
+nossos computadores deixando claro, que nos dias de hoje devemos nos preocupar  em  defender e
+preservar nossos dados, a fim de evitar problemas catastróficos, ela alerta de como isso é simples.
+Hoje tudo passa por computadores, devemos cuidar zelar e principalmente proteger os dados armazenados,
+essa tarefa não é mais direcionado a os desenvolvedores isso cabe a cada cidadão usuário da computação!

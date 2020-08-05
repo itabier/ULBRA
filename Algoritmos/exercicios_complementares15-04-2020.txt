@@ -1,0 +1,469 @@
+Exercícios complementares do dia 15/04/2020
+
+1 - Faça um programa que receba o valor da venda, escolha a condição de pagamento 
+no menu e mostre o total da venda final conforme condições a seguir:
+1 - Venda a Vista - desconto de 10%
+2 - Venda a Prazo 30 dias - desconto de 5%
+3 - Venda a Prazo 60 dias - mesmo preço
+4 - Venda a Prazo 90 dias - acréscimo de 5%
+5 - Venda com cartão de débito - desconto de 8%
+6 - Venda com cartão de crédito - desconto de 7%
+
+#include <stdio.h>
+
+int main()
+{
+    float valor_vend, perc, vend_final;
+    int opc;
+    
+    printf("Digite o valor da venda: R$");
+    scanf("%f", &valor_vend);
+    printf("Escolha a opção de venda: ");
+    printf("\n1 - Venda a Vista - desconto de 10%");
+    printf("\n2 - Venda a Prazo 30 dias - desconto de 5%");
+    printf("\n3 - Venda a Prazo 60 dias - mesmo preço");
+    printf("\n4 - Venda a Prazo 90 dias - acréscimo de 5%");
+    printf("\n5 - Venda com cartão de débito - desconto de 8%");
+    printf("\n6 - Venda com cartão de crédito - desconto de 7%\n");
+    scanf("%i", &opc);
+    
+    if (opc == 1)
+    {    
+        perc = ((valor_vend*10)/100);
+        vend_final = valor_vend-perc;
+        printf("O valor da venda fica em: R$%.2f", vend_final);
+    }
+    
+    else
+        if(opc == 2)
+    {    
+        perc = ((valor_vend*5)/100);
+        vend_final = valor_vend-perc;
+        printf("O valor da venda fica em: R$%.2f", vend_final);
+    }
+    
+    else
+        if(opc == 3)
+    {    
+       vend_final = valor_vend;
+        printf("O valor da venda fica em: R$%.2f", vend_final);
+    }
+    
+    else
+        if(opc == 4)
+    {    
+        perc = ((valor_vend*5)/100);
+        vend_final = valor_vend+perc;
+        printf("O valor da venda fica em: R$%.2f", vend_final);
+    }
+    
+    else
+        if(opc == 5)
+    {    
+        perc = ((valor_vend*8)/100);
+        vend_final = valor_vend-perc;
+        printf("O valor da venda fica em: R$%.2f", vend_final);
+    }
+    
+    else
+        if(opc == 6)
+    {    
+        perc = ((valor_vend*7)/100);
+        vend_final = valor_vend-perc;
+        printf("O valor da venda fica em: R$%.2f", vend_final);
+    }
+    
+    else
+        printf("Opção inválida, a venda fica em: R$%.2f", valor_vend);
+
+    return 0;
+}
+
+
+2 - Faça um algoritmo que leia um mês e diga qual a estação do ano correspondente (Primavera, Verão, Outono, Inverno).
+Considere:
+outono - abril, maio e junho
+Inverno - julho, agosto e setembro
+Primavera – outubro, novembro e dezembro
+Verão – janeiro, fevereiro e março
+
+#include <stdio.h>
+
+int main()
+{
+    int mes;
+    
+    printf("Diga em qual mês do ano estamos, opções:\n 1- Janeiro\n 2- Fevereiro\n 3- Março\n 4- Abril\n 5- Maia\n 6- Junho\n 7- Julho\n 8- Agosto\n 9- Setembro\n 10- Outubro\n 11- Novembro\n 12- Dezembro\n");
+	scanf("%i", &mes);
+	
+	if ((mes == 1) || (mes == 2) || (mes == 3))
+	{
+		printf("Estamos no verão");
+	}
+	else
+		if (mes == 4 || mes == 5 || mes == 6 )
+		{
+			printf("Estamos no outono");
+		}
+	else
+		if (mes == 7 || mes == 8 || mes == 9)
+		{
+			printf("Estamos no inverno");
+		}
+	else
+		if (mes == 10 || mes == 11 || mes == 12)
+		{
+			printf("Estamos na primavera");
+		}
+	else
+		{
+		printf("Opção invalida");
+		}
+    return 0;
+}
+
+
+3 - Para reajustar o salário de acordo com a função. Se for técnico, aumentar o salário 50%, se for gerente,
+aumentar 30% e se for outro cargo, aumentar 20%.
+
+#include <stdio.h>
+
+int main()
+{
+    float salario, total, cargo;
+    
+    
+	printf("Digite 1 para técnico, 2 para gerente ou 3 para outros cargos: ");
+	scanf("%f", &cargo);
+    
+	printf("Digite o valor do sálario: R$");
+	scanf("%f", &salario);
+    
+	if (cargo == 1)
+	{
+		total = (salario/100)*150;
+		printf("Seu sálario será de: R$ %.2f", total);
+	}
+    
+	else 
+		if (cargo == 2)
+		{
+			total = (salario/100)*130;
+				printf("Seu sálario será de : R$ %.2f", total);
+		}
+    
+	else
+	{   
+		total = (salario/100)*120;
+			printf("Seu sálario será de: R$ %.2f", total);
+	}
+
+
+4 - Faça um algoritmo para ler um número e se ele for maior do que 30, então
+exibir metade do número, caso contrário, imprimir o dobro do número.
+
+#include <stdio.h>
+
+int main()
+
+{
+    	
+	float nro1, met_nro, dob_nro;
+    
+
+	printf("Digite um número: ");
+	scanf("%f", &nro1);
+
+        
+	if (nro1 > 30)
+    	{
+        	dob_nro = nro1*2;
+			printf("Exibindo: %.1f", dob_nro);
+    	}
+    
+	else
+	{
+	   	met_nro = nro1/2;
+			printf("Exibindo: %.1f", met_nro);
+  	}
+  		
+   
+ 
+	return 0;
+
+}
+
+
+5 - Faça um algoritmo para ler três números e verificar se a soma deles é maior
+que 50. Se for, escrever uma mensagem informando.
+
+#include <stdio.h>
+
+int main()
+{
+
+    	int nro1, nro2, nro3, soma;
+    
+
+	printf("Digite um número: ");
+    
+	scanf("%i", &nro1);
+    
+	printf("Digite um segundo número: ");
+    
+	scanf("%i", &nro2);
+    
+	printf("Digite um terceiro número: ");
+    
+	scanf("%i", &nro3);
+    
+    
+	soma = nro1+nro2+nro3;
+    
+    
+	if (soma > 50)
+        {
+		printf("A soma dos três números é maior que 50");
+		printf("\nA soma é: %i", soma);
+	}
+	
+	else
+	{
+		printf("A soma dos três números não é maior que 50");
+		printf("\nA soma é: %i", soma);
+	}
+
+	return 0;
+
+}
+
+
+6 - Construir um algoritmo que leia dois números e efetue a adição. Caso o valor somado seja maior que 20,
+este deverá ser apresentado somando e a ele mais 8; caso o valor somado seja menor ou igual a 20,
+este deverá ser apresentado subtraindo-se 5
+
+#include <stdio.h>
+
+int main()
+{
+    
+	int nro1, nro2, soma, soma_nro1, soma_nro2;
+
+	printf("Digite um número: ");
+	scanf("%i", &nro1);
+    
+	printf("Digite outro número: ");
+	scanf("%i", &nro2);
+
+	soma = nro1+nro2;
+    
+	soma_nro1 = soma+8;
+    
+	soma_nro2 = soma-5;
+    
+    
+	if (soma > 20)
+	{
+		printf("%i + 8 é = %i", soma, soma_nro1);
+	}
+    
+	else
+	{
+		printf("%i - 5 é = %i", soma, soma_nro2);
+	}
+   
+	return 0;
+
+}
+
+
+7 - Fazer um algoritmo que leia o percurso em quilômetros, o tipo do carro e informe o consumo estimado de combustível,
+sabendo-se que um carro tipo C faz 12 Km com um litro de gasolina, um tipo B faz 9 Km e o tipo A, 8 Km por litro.
+
+#include <stdio.h>
+
+int main()
+
+{
+    
+	float per_km, cons_comb, resp_final;
+	char t;
+
+
+	printf("Digite o tipo do carro, indentificados como a, b ou c: ");
+	scanf("%c", &t);
+    	
+	printf("Digite a distância percorrida em Km: ");
+	scanf("%f", &per_km);
+    
+	
+	if (t == 'a' || t == 'A')
+	{
+		resp_final = per_km/8;
+			printf("O carro A irá consumir: %.2f L", resp_final);
+	}
+    
+
+	else 
+		if (t == 'b' || t == 'B')
+		{
+			resp_final = per_km/9;
+				printf("O carro B irá consumir: %.2f L", resp_final);
+		}
+    
+    
+	else 
+		if (t == 'c' || t == 'C')
+		{
+			resp_final = per_km/12;
+				printf("O carro C irá consumir: %.2f L", resp_final);
+		}
+    
+
+	else 
+	{
+		printf("Este carro não existe");
+	}
+    
+	return 0;
+
+}
+
+
+8 - As maçãs custam R$ 1,50 cada se forem compradas menos de uma dúzia, e R$ 1,00 se forem compradas pelo menos 12.
+Escreva um programa que leia o número de maçãs compradas, calcule e escreva o custo total da compra.
+
+#include <stdio.h>
+
+int main()
+
+{
+
+	float nro_macas, total_com1, total_com2;
+    
+	
+	printf("Digite a quantidade de maçãs: ");
+	scanf("%f", &nro_macas);
+
+
+	if (nro_macas < 12)
+	{
+		total_com1 = nro_macas*1.50;
+			printf("O valor da compra é: R$ %.2f",total_com1);
+	}
+        
+
+	else 
+		if (nro_macas >= 12)
+		{
+			total_com2 = nro_macas*1.00;
+				printf("O valor da compra é: R$ %.2f",total_com2);
+		}
+    
+	return 0;
+
+}
+
+
+9 - Para participar da categoria OURO do 1o. Campeonato Mundial de bolinha de Gude o jogador deve pesar entre 70 Kg (inclusive)
+e 80 Kg (inclusive) e medir de 1,75 m (inclusive) a 1,90 m (inclusive). Escreva um programa para ler a altura e o peso de um 
+jogador e determine se o jogador está apto a participar do campeonato escrevendo uma das seguintes mensagens conforme cada situação.
+
+‘RECUSADO POR ALTURA’ - (se somente a altura do jogador for inválida)
+
+‘RECUSADO POR PESO’ - (se somente o peso do jogador for inválido)
+
+‘TOTALMENTE RECUSADO’-(se a altura e o peso do jogador for inválido)
+
+‘ACEITO' - (se a altura e o peso do jogador estiverem dentro da faixa especificada)
+
+#include <stdio.h>
+
+int main()
+
+{   
+
+	float peso, altura;
+    	bool pesoValido, alturaValida;
+    
+    	printf("Digite seu peso em quilos: ex. 58\n");
+    	scanf("%f", &peso);
+    
+    	printf("Digite sua altura em metros: ex. 1.65\n");
+	scanf("%f", &altura);
+	
+	pesoValido = peso >= 70 && peso <= 80;
+	alturaValida = altura >= 1.75 && altura <= 1.90;
+	
+	if (pesoValido && alturaValida)
+	{
+	    printf("ACEITO");
+	} 
+	
+	else 
+		if(pesoValido && alturaValida == false) 
+		{
+	    	printf("RECUSADO POR ALTURA");
+		} 
+	
+	else 
+		if(pesoValido == false && alturaValida) 
+		{
+	    	printf("RECUSADO POR PESO");
+		} 
+		
+	else 
+	{
+	    printf("TOTALMENTE RECUSADO");
+	}
+
+	return 0;
+
+}
+
+
+10 - Faça um algoritmo para ler: número da conta do cliente, saldo, débito e crédito. Após, 
+calcular e escrever o saldo atual (saldo atual = saldo - débito + crédito). 
+Também testar se saldo atual for maior ou igual a zero escrever a mensagem 'Saldo Positivo',
+senão escrever a mensagem 'Saldo Negativo'.
+
+#include <stdio.h>
+
+int main()
+
+{   
+
+	float nro_cliente, saldo_atual, saldo, deb, cred;
+
+    
+	printf("Digite o número da conta: ");
+	scanf("%f", &nro_cliente);
+    
+	printf("Digite o saldo: R$ ");
+	scanf("%f", &saldo);
+    
+	printf("Digite o valor do débito atual: R$ ");
+	scanf("%f", &deb);
+    
+	printf("Digite o valor do crédito atual: R$ ");
+	scanf("%f", &cred);
+
+	saldo_atual = (saldo-deb)+cred;
+
+    
+	if (saldo_atual >= 0)
+	{
+		printf("Seu saldo atual é: R$ %.2f", saldo_atual);
+		printf("\nSaldo Positivo");
+	}
+
+   
+	else
+	{ 
+		printf("Seu saldo atual é: R$ %.2f", saldo_atual);
+		printf("\nSaldo Negativo");
+	}
+    
+	return 0;
+
+}

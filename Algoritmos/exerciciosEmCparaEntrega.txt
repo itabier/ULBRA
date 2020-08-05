@@ -45,10 +45,8 @@ int main()
 }
 
 
-2 - Faça um algoritmo para ler um número e se ele for maior do que 
-30, então
- exibir metade do número, caso contrário, imprimir o 
-dobro do número.
+2 - Faça um algoritmo para ler um número e se ele for maior do que 30, então
+exibir metade do número, caso contrário, imprimir o dobro do número.
 
 #include <stdio.h>
 
@@ -535,13 +533,12 @@ int main()
     
 	scanf("%f", &cred);
 
-    
+    	
+	saldo_atual = (saldo-deb)+cred;
 
 	if (saldo_atual >= 0)
     
 	{
-        
-		saldo_atual = (saldo-deb)+cred;
             
 		printf("Seu saldo atual é: R$ %.2f", saldo_atual);
             
@@ -1582,3 +1579,5 @@ Código Produto      Preço Unitário
 	0987                5,32
     
 	7623                6,45
+
+

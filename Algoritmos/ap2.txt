@@ -1,0 +1,142 @@
+ALGORITMOS E PROGRAMAÇÃO
+Prof. Adriana Bueno
+Atividade de Avaliação de Parcial 2 (AP2) - Peso (2,5)
+ 
+Resolva os dois exercícios abaixo:
+
+1. (1,5) Em uma rodovia existe um pedágio que precisa controlar o número de veículos que transitam e pagam pedágio. O número de veículos que transitam nunca é uma quantidade específica. Por isso, é necessario ler os dados dos veículos até que o operador do sistema decida parar parar as leituras. Escreva um algoritmo, ou programa na linguagem C, que faça a leitura dos veículos que passam no pedágio. Para cada veíclo deve ser lido a placa(considere como um número inteiro) e o tipo do veículo. 
+Os tipos aceitos e os valores por tipo estão abaixo:
+
+Tipo do veículo 
+Valor do pedágio
+1- Automóvel
+12,80
+2 - Moto
+8,20
+3 - Caminhão
+22,20
+  
+Faça uma validação para aceitar somente os tipos definidos na tabela.
+
+Após registrar a passagem de um veículo o sitema deve  perguntar se o operador deseja ler registrar outra passagem(s/n).
+
+Quando o operador finalizar as leituras(responder N), o sistema deve escrever:
+Número total de veúclos que passaram no pedágio
+Valor total arrecadado
+Tipo de veículo que mais passou no pedágio 
+
+#include <stdio.h>
+
+int main()
+{
+    int placa, cont_1=0,cont_2=0, cont_3=0, tipo_veiculo, soma_veiculos=0;
+    float soma_valor=0;
+    char resp;
+    do
+    {
+    printf("Digite a placa do veículo: ");
+    scanf("%i",&placa);
+    printf("Digite o tipo de veículo(1/automóvel, 2/moto, 3/caminhão): ");
+    scanf("%i",&tipo_veiculo);
+        while((tipo_veiculo<1)||(tipo_veiculo>3))
+        {
+        printf("ERRO! tipo de veículo não aceito, digite novamente: ");
+        scanf("%i",&tipo_veiculo);
+        }
+        switch (tipo_veiculo)
+        {
+    		case 1:		
+    			printf("Tipo de veículo selecionado: Automóvel.\n");
+    			cont_1++;
+    			break;
+    		case 2:
+    			printf("Tipo de veículo selecionado: Moto.\n");
+    			cont_2++;
+    			break;
+    		case 3:
+    			printf("Tipo de veículo selecionado: Caminhão.\n");
+    			cont_3++;
+    			break;
+        }
+        soma_veiculos++;
+    printf("Deseja registrar outra passagem(s/n)? ");
+    getchar();
+    scanf("%c",&resp);
+    }while((resp=='s')||(resp=='S'));
+    soma_valor=((cont_1*12.80)+(cont_2*8.20)+(cont_3*22.20));
+    printf("Total de veículos que trafegaram na rodovia são de: %i\n",soma_veiculos);
+    printf("Total arrecadado é de: R$%.2f\n",soma_valor);
+    if((cont_1>cont_2)&&(cont_1>cont_3))
+    {
+        printf("Trafegaram mais automóveis: %i\n",cont_1);
+    }
+    if((cont_2>cont_1)&&(cont_2>cont_3))
+    {
+        printf("Trafegaram mais motos: %i\n",cont_2);
+    }
+    if((cont_3>cont_1)&&(cont_3>cont_2))
+    {
+        printf("Trafegaram mais caminhões: %i\n",cont_3);
+    }   
+    if((cont_1==cont_2)&&(cont_1>cont_3))
+    {
+        printf("Trafegaram a mesma quantidade automóveis e motos: %i e %i",cont_1,cont_2);
+    }
+    if((cont_1==cont_3)&&(cont_1>cont_2))
+    {
+        printf("Trafegaram a mesma quantidade automóveis e caminhões: %i e %i",cont_1,cont_3);
+    }
+    if((cont_2==cont_3)&&(cont_2>cont_1))
+    {
+        printf("Trafegaram a mesma quantidade motos e caminhões: %i e %i",cont_2,cont_3);
+    }
+     if((cont_1==cont_2)&&(cont_2==cont_3))
+    {
+        printf("Trafegaram a mesma quantidade automóveis, motos e caminhões: %i, %i e %i",cont_1,cont_2,cont_3);
+    }
+    return 0;
+}
+
+
+
+2. (1,0)  Em uma rodovia existe um posto de pesagem de veículos de carga. O limite de peso admitido é de 28675,00kg. Faça um algorítimo ou programa na linguagem C, que leia o peso do caminhão e verifique se ele está acima do limite. Se estiver, o sistema deve escrever a mensagem "Carga acima do limite permitido, veículo sofrerá penalidade de multa!". 
+Seu sistema deve ler um número indeterminado de pesos de veículos de carga até que o peso zero seja digitado. 
+Informar o maior e menor peso de veículo que transitou na rodovia. 
+
+#include <stdio.h>
+
+int main()
+{
+        float menor = 0, maior = 0, peso, limit = 28675.0;
+    
+    do {
+        printf("digite seu peso: ");
+        scanf("%f", &peso);
+        if(peso != 0) 
+        {
+            if((menor == 0)&&(maior == 0))
+            {
+                menor = peso;
+                maior = peso;
+            } 
+            if(peso > maior) 
+            {
+                maior = peso;
+            }
+            if(peso < menor) 
+            {
+                menor = peso;
+            }
+            if(peso > limit) 
+            {
+                printf("Peso acima do limite permitido, o veículo sofrerá penalidade!\n");
+            }
+        }         
+    } while(peso != 0);
+    
+    printf("Menor peso: %.2f kg\n", menor);
+    printf("Maior peso: %.2f kg", maior);
+ 
+
+    return 0;
+}

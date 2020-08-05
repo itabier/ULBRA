@@ -1,0 +1,360 @@
+ex. slide:
+
+#include <stdio.h>
+
+int main()
+{
+	int vet[10], x;
+  
+	for(x=0; x<=9;x++)
+     {
+         printf("\nDigite vetor na posição(%i):  ", x);
+         scanf("%i", &vet[x]);
+     }
+	printf("\n %i[primeiro elemento do vetor]  %i[segundo elemento do veto]  ", vet[0], vet[1]);
+	printf("\nVetor lido: ");     
+	for(x=0; x<=9;x++)
+     {
+         printf("  %i[%i]  ", vet[x],x);
+         
+     }     
+    return 0;
+}
+
+TDE
+
+1.Faça um algoritmo, ou programa em linguagem C, que leia as notas de 10 alunos de uma turma e armazene
+em um vetor e depois exiba na telas todas as notas.
+
+#include <stdio.h>
+
+int main()
+{
+     float vet[10], x;
+     
+     for(x==0;x<=9;x++)
+     {
+        printf("\nDigite a nota dos 10 alunos:");
+        scanf("%f", &x);
+     }
+     
+     printf("\nAs notas dos 10 alunos são:");
+     for(x==0;x<=9;x++)
+     {
+         printf("  %f[%f]  ", vet[x],x);
+     }
+
+    return 0;
+}
+
+
+2.Agora faça um algoritmo que calcule a média aritmética de 5 alunos e armazene em um vetor.
+Para calcular a média é necessário ler duas notas para cada aluno. No final, exiba na telas as médias dos alunos.
+
+#include <stdio.h>
+
+int main()
+{
+     float media[5], nota1, nota2;
+     int x;
+     
+     for(x=0;x<=4;x++)
+     {  
+        printf("\n****** Notas do aluno [%i] ******", x+1);
+        printf("\nDigite a primeira nota:");
+        scanf("%f", &nota1);
+        printf("\nDigite a segunda nota:");
+        scanf("%f", &nota2);
+        media[x] = (nota1+nota2)/2;
+     }
+     
+     for(x=0;x<=4;x++)
+     {
+         printf("\n A media do aluno %i: %.2f ", x+1, media[x]);
+     }
+
+    return 0;
+}
+
+
+3.Continuando o algoritmo da questão anterior, ao invés de armazenar no vetor as médias, armazene a
+palavra “APROVADO”ou “REPROVADO”. Para ser aprovado um aluno tem que ter a média maior ou igual a nota 7.
+
+#include <stdio.h>
+
+int main()
+{
+	float media, nota1, nota2;
+    int x, vet[4];
+    
+    for (x=0;x<5;x++)
+    {
+        printf("Digite a nota 1 do aluno número %i ", x+1);
+        scanf("%f", &nota1);
+        printf("Digite a nota 2 ");
+        scanf("%f", &nota2);
+        media=(nota1+nota2)/2;
+        
+        if (media>=7)
+        {
+            vet[x]=1;
+        }
+        if (media<7)
+        {
+            vet[x]=2;
+        }
+    }
+    
+    for (x=0;x<5;x++)
+    {
+        printf("\n1 para APROVADO e 2 para REPROVADO: O aluno %i esta %i",x+1,vet[x]);
+    }
+	
+	return 0;
+}
+
+
+4.Faça um algoritmo, ou programa em linguagem C, que leia um vetor de 10 elementos.
+Deve calcular e imprimir a soma de todos os valores existentes no vetor.
+
+#include <stdio.h>
+
+int main()
+{
+
+    float vet[9], soma=0;
+    int x;
+    
+    for (x=0;x<10;x++)
+    {
+        printf("Digite um número: ");
+        scanf("%f", &vet[x]);
+        soma= soma+vet[x];
+    }
+    
+    printf("A soma de todos os valores no vetor é: %.2f", soma);
+	
+	return 0;
+}
+
+
+5.Ler um vetor de 10 elementos. Calcular e imprimir a soma dos valores maiores que 5 existentes no vetor.
+
+#include <stdio.h>
+
+int main()
+{
+
+	float vet[9], soma=0;
+    int x;
+    for(x=0;x<10;x++)
+    {
+        printf("Digite um valor correspondente a o numero %i: ",x);
+        scanf("%f",&vet[x]);
+         if(vet[x]>5)
+         {
+            soma=soma+vet[x];
+         }
+    }
+    for(x=0;x<10;x++)
+    {
+        if(vet[x]>5)
+        {
+            
+            printf("digito %i que é %.2f \n",x,vet[x]);
+        }
+    }
+    printf("soma deles são: %.2f",soma);
+	
+	return 0;
+}
+
+
+6.Faça um algoritmo, ou programa em linguagem C, que leia os salários de 10  funcionários
+de uma empresa e após exiba os salários e o salário mais alto.
+
+#include <stdio.h>
+
+int main()
+{
+    float vet[10], maxSalario = 0;
+    int x;
+    
+    for (x=0;x<10;x++)
+    {
+        printf("Digite o sálario do funcionário %i: \nR$ ",x+1);
+        scanf("%f", &vet[x]);
+        
+        if (vet[x]>maxSalario)
+        {
+            maxSalario=vet[x];
+        }
+    }
+    for (x=0;x<10;x++)
+    {
+        printf("\nO sálario do funcionário %i é R$ %.2f",x+1,vet[x]);
+    }
+    
+    printf("\nO maior sálario é: R$ %.2f",maxSalario);
+    
+    return 0;
+}
+
+
+7.Escreva um algoritmo para ler um vetor A de 10 elementos inteiros e um valor N.
+A seguir imprimir "ACHEI" se o valor N existir em A e "NÃO ACHEI" caso contrário.
+
+#include <stdio.h>
+
+int main()
+{
+    int a[10], n, x, achei=0;
+    
+    printf("Digite 10 valores\n");
+    for (x=0;x<10;x++)
+    {
+        printf("\nDigite o valor do elemento %i: ",x+1);
+        scanf("%i", &a[x]);
+    }
+    printf("\nValor procurado: ");
+    scanf("%i", &n);
+    
+    for (x=0;x<10;x++)
+    {
+        if (n == a[x])
+            achei=1;
+    }
+        
+    if (achei=1)
+    {
+        printf("\nAchei");
+    }
+        
+    else
+    {
+        printf("\nNão achei");
+    }
+    
+    return 0;
+}
+	
+
+8.Faça um algoritmo, ou programa em linguagem C, que armazene 15 números informados pelo
+usuário e em seguida informe quantos números 10 existe no vetor.
+
+#include <stdio.h>
+
+int main()
+{
+    int x, vet[14],cont=0;
+	
+    for(x=0;x<15;x++)
+    {
+        printf("Digite um valor correspondente a o numero %i: ",x);
+        scanf("%i",&vet[x]);
+    }
+        for(x=0;x<10;x++)
+        {
+            if(vet[x]==10)
+            {
+                cont++;
+            }
+        }
+    printf("existe %i numeros 10 dentro do vetor",cont);
+	
+    return 0;
+}
+
+
+9.Fazer um programa para ler um vetor de inteiros positivos de 20 posições (somente aceitar números positivos).
+Imprimir a quantidade de números pares.
+
+#include <stdio.h>
+
+int main()
+{
+    int x, vet[4],cont=0;
+	
+    for(x=0;x<5;x++)
+    {
+        printf("Digite um valor correspondente a o numero %i: ",x);
+        scanf("%i",&vet[x]);
+        while(vet[x]<0)
+        {
+            printf("ERRO digite novamente: ");
+            scanf("%i",&vet[x]);
+        }
+    }
+        for(x=0;x<5;x++)
+        {
+            if(vet[x] % 2 ==0)
+            {
+                cont++;
+            }
+        }
+    printf("existe %i numeros pares dentro do vetor",cont);
+	
+    return 0;
+}
+
+
+10.Faça um algoritmo, ou programa em linguagem C, para ler um vetor de 10 elementos inteiros e um valor N.
+Listar todos os valores do vetor e em seguida, listar o vetor multiplicado pelo valor N.
+
+#include <stdio.h>
+
+int main()
+{
+    int x, vet[10],n,resul;
+	
+    printf("Digite um valor que sera representando pela letra N: ");
+    scanf("%i",&n);
+    for(x=0;x<10;x++)
+    {
+        printf("Digite um valor correspondente a o numero %i: ",x);
+        scanf("%i",&vet[x]);
+    }
+    for(x=0;x<10;x++)
+    {
+        printf("%i° valoro digitado:%i\n",x,vet[x]);
+    }
+    for(x=0;x<10;x++)
+    {
+        resul=vet[x]*n;
+        printf("%iX%i=%i\n",vet[x],n,resul);
+    }        
+    
+	return 0;
+}
+
+
+11.Faça um algoritmo, ou programa em linguagem C, que leia os salários de 15 funcionários
+de uma empresa. Armazene os salários em um vetor. A empresa deseja conceder aumento de
+10% a todos os funcionários. Atualize o vetor de salários com o aumento e escreva os
+salários atualizados na tela.
+
+#include <stdio.h>
+
+int main()
+{
+    int x,resul;
+    float vet[4],aumento;
+	
+    for(x=0;x<5;x++)
+    {
+        printf("Digite um valor do salario do funcionario correspondente a o numero %i: ",x);
+        scanf("%f",&vet[x]);
+    }
+    for(x=0;x<5;x++)
+    {
+        aumento=vet[x]/10;
+        vet[x]=vet[x]+aumento;
+    }
+    for(x=0;x<5;x++)
+    {
+        
+        printf("valor do salario com aumento %.2f do funcionario correspondente a o numero %i\n",vet[x],x);
+    }
+	
+    return 0;
+}
